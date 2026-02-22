@@ -1,7 +1,5 @@
 'use client';
 
-export const dynamic = 'force-dynamic';
-
 import React, { useState, useMemo, useEffect } from 'react';
 import CompanyTable from '@/components/companies/CompanyTable';
 import mockCompanies from '@/data/mock-companies.json';
@@ -12,11 +10,12 @@ import { useSearchParams } from 'next/navigation';
 import { toast } from 'sonner';
 import Modal from '@/components/ui/Modal';
 import Dropdown from '@/components/ui/Dropdown';
+export const dynamic = 'force-dynamic'
 
 const stages: Stage[] = ['Seed', 'Series A', 'Series B', 'Series C', 'Growth', 'Late Stage'];
 const industries = Array.from(new Set(mockCompanies.map(c => c.industry)));
 
-export default function CompaniesPage() {
+function CompaniesContent() {
     const searchParams = useSearchParams();
     const queryParam = searchParams.get('q') || '';
     const stageParam = searchParams.get('stage') || 'All';
@@ -167,7 +166,7 @@ export default function CompaniesPage() {
                             options={['Name', 'Funding']}
                             value={sortBy}
                             onChange={setSortBy}
-                            placeholder="Name"
+                            placeholder="Sort By"
                             icon={<ArrowUpDown className="w-4 h-4" />}
                         />
                     </div>
@@ -214,5 +213,13 @@ export default function CompaniesPage() {
                 </div>
             </Modal>
         </div>
+    );
+}
+
+export default function CompaniesPage() {
+    return (
+        <React.Suspense fallback={<div className="p-10 text-center font-bold">Loading Intelligence Engine...</div>}>
+            <CompaniesContent />
+        </React.Suspense>
     );
 }

@@ -114,7 +114,7 @@ export default function CompanyTable({ companies }: CompanyTableProps) {
                 </div>
                 <div className="flex items-center gap-6">
                     <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.1em]">
-                        Page {currentPage} <span className="text-slate-200 mx-1">/</span> {totalPages || 1}
+                        PAGE {currentPage} <span className="text-slate-200 mx-1">/</span> {totalPages || 1}
                     </p>
                     <div className="flex items-center gap-2">
                         <button

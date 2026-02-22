@@ -163,13 +163,19 @@ export default function EnrichmentPanel({ companyId, url }: EnrichmentPanelProps
                             </div>
 
                             <div className="group/item">
-                                <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Market Keywords</h4>
+                                <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">
+                                    Market Keywords
+                                </h4>
                                 <div className="flex flex-wrap gap-2">
-                                    {data.keywords.slice(0, 10).map((keyword, i) => (
+                                    {/* Defensive keywords mapping with exact fallback request */}
+                                    {data?.keywords?.slice(0, 10).map((keyword, i) => (
                                         <span key={i} className="bg-slate-100 text-slate-600 px-2 py-1 rounded-md text-[10px] font-bold border border-slate-200/50 hover:bg-slate-200 transition-colors cursor-default">
                                             {keyword}
                                         </span>
-                                    ))}
+                                    )) || <p className="text-[10px] text-slate-400 italic">No keywords available</p>}
+                                    {data?.keywords && data.keywords.length === 0 && (
+                                        <span className="text-[10px] text-slate-400 italic">No keywords extracted</span>
+                                    )}
                                 </div>
                             </div>
 
