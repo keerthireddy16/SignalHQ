@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "name": "Vercel",
+    "url": "https://vercel.com",
+    "description": "Vercel is the platform for frontend developers, providing the speed and reliability innovators need to create at the moment of inspiration.",
+    "industry": "Developer Tools",
+    "location": "San Francisco, CA",
+    "stage": "Series D",
+    "fundingAmount": "$313M",
+    "foundedDate": "2015"
+  },
+  {
+    "id": "2",
+    "name": "Linear",
+    "url": "https://linear.app",
+    "description": "Linear is a purpose-built tool for planning and building products, streamlining software projects, tasks, and bug tracking.",
+    "industry": "SaaS",
+    "location": "Remote",
+    "stage": "Series B",
+    "fundingAmount": "$52M",
+    "foundedDate": "2019"
+  },
+  {
+    "id": "3",
+    "name": "Figma",
+    "url": "https://figma.com",
+    "description": "Figma is a collaborative web application for interface design, with additional offline features enabled by desktop applications for macOS and Windows.",
+    "industry": "Design Tools",
+    "location": "San Francisco, CA",
+    "stage": "Late Stage",
+    "fundingAmount": "$333M",
+    "foundedDate": "2012"
+  },
+  {
+    "id": "4",
+    "name": "Retool",
+    "url": "https://retool.com",
+    "description": "Retool is a fast way to build internal software. Connect to your database or API and build custom tools with drag-and-drop components.",
+    "industry": "Developer Tools",
+    "location": "San Francisco, CA",
+    "stage": "Series C",
+    "fundingAmount": "$145M",
+    "foundedDate": "2017"
+  },
+  {
+    "id": "5",
+    "name": "Stripe",
+    "url": "https://stripe.com",
+    "description": "Stripe is a suite of payment APIs that powers commerce for online businesses of all sizes.",
+    "industry": "Fintech",
+    "location": "San Francisco, CA",
+    "stage": "Late Stage",
+    "fundingAmount": "$2.2B",
+    "foundedDate": "2010"
+  },
+  {
+    "id": "6",
+    "name": "Scale AI",
+    "url": "https://scale.com",
+    "description": "Scale AI provides data labeling services for machine learning teams, helping to accelerate the development of AI applications.",
+    "industry": "AI/ML",
+    "location": "San Francisco, CA",
+    "stage": "Series E",
+    "fundingAmount": "$600M",
+    "foundedDate": "2016"
+  },
+  {
+    "id": "7",
+    "name": "Rippling",
+    "url": "https://rippling.com",
+    "description": "Rippling is an employee management platform that brings together HR, IT, and Finance.",
+    "industry": "Workforce Management",
+    "location": "San Francisco, CA",
+    "stage": "Series E",
+    "fundingAmount": "$1.2B",
+    "foundedDate": "2016"
+  },
+  {
+    "id": "8",
+    "name": "Notion",
+    "url": "https://notion.so",
+    "description": "Notion is a single space where you can think, write, and plan. Capture thoughts, manage projects, or even run an entire company.",
+    "industry": "Productivity",
+    "location": "San Francisco, CA",
+    "stage": "Series C",
+    "fundingAmount": "$343M",
+    "foundedDate": "2016"
+  },
+  {
+    "id": "9",
+    "name": "Supabase",
+    "url": "https://supabase.com",
+    "description": "Supabase is an open source Firebase alternative, providing a full backend with PostgreSQL, Auth, and Storage.",
+    "industry": "Developer Tools",
+    "location": "Singapore",
+    "stage": "Series B",
+    "fundingAmount": "$116M",
+    "foundedDate": "2020"
+  },
+  {
+    "id": "10",
+    "name": "Airtable",
+    "url": "https://airtable.com",
+    "description": "Airtable is a cloud-based software company that blends a traditional spreadsheet with a database.",
+    "industry": "SaaS",
+    "location": "San Francisco, CA",
+    "stage": "Series F",
+    "fundingAmount": "$1.4B",
+    "foundedDate": "2012"
+  }
+]
