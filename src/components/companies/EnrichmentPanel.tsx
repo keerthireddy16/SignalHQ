@@ -95,7 +95,7 @@ export default function EnrichmentPanel({ companyId, url }: EnrichmentPanelProps
                         </div>
                         <div className="text-center space-y-1">
                             <p className="text-xs font-black text-slate-900 uppercase tracking-[0.3em] animate-pulse">Deep Scanning</p>
-                            <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest italic overflow-hidden whitespace-nowrap border-r-2 border-blue-500 pr-1 animate-typing w-[20ch]">Parsing Web Objects...</p>
+                            <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest italic overflow-hidden border-r-2 border-blue-500 pr-1 animate-typing w-full">Parsing Web Objects...</p>
                         </div>
                     </div>
                 )}

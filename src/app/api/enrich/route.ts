@@ -45,11 +45,11 @@ export async function POST(req: NextRequest) {
         }
 
         // 3. Gemini Integration via SDK
-        const genAI = new GoogleGenerativeAI(API_KEY);
-        const model = genAI.getGenerativeModel({
-            model: "gemini-1.5-flash",
-            generationConfig: { responseMimeType: "application/json" }
-        });
+        const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
+        const model = genAI.getGenerativeModel(
+            { model: "models/gemini-2.0-flash-lite" },
+            { apiVersion: "v1" }
+        );
 
         const prompt = `
             You are a VC intelligence agent. Analyze this content from ${url}.

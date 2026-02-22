@@ -11,7 +11,7 @@ A precision AI scout designed to turn VC investment theses into an always-on dis
 *   **Smart Table**: Sortable results with "Funding" amount parsing and clean "Page-based" pagination.
 
 ### 2. Live AI Enrichment (The "Core Scan")
-*   **Autonomous Intelligence**: On-demand public web scraping powered by **Google Gemini 1.5 Flash**.
+*   **Autonomous Intelligence**: On-demand public web scraping powered by **Google Gemini 2.0 Flash**.
 *   **Intelligence Extraction**:
     *   **Vision Summary**: 1-2 sentence vision-centric summary.
     *   **Core Competencies**: 3-6 targeted product/market bullets.
@@ -27,7 +27,7 @@ A precision AI scout designed to turn VC investment theses into an always-on dis
 ## 🛠️ Technical Architecture
 
 *   **Frontend**: Next.js 16 (App Router) + Tailwind CSS 4 + Lucide React.
-*   **Intelligence**: Gemini 1.5 Flash (Standardized for high availability and quota resilience).
+*   **Intelligence**: Gemini 2.0 Flash (Optimized for the stable `v1` endpoint).
 *   **Scraping**: Server-side Cheerio engine with browser-spoofing headers for robust public page access.
 *   **Data Persistence**: Full state synchronization via `localStorage` and URL deep-linking.
 *   **Hardened Security**: 
@@ -56,5 +56,12 @@ A precision AI scout designed to turn VC investment theses into an always-on dis
     ```
     Access the interface at `http://localhost:3000/companies`.
 
+## 🚢 Vercel Deployment
+
+1.  **Deploy**: Push this repository to GitHub and connect it to Vercel.
+2.  **Environment Variables**: In the Vercel Dashboard, navigate to **Settings > Environment Variables** and add:
+    *   `GEMINI_API_KEY`: Your production API key from Google AI Studio.
+3.  **Redeploy**: Ensure a new deployment is triggered after adding the key.
+
 ---
-*Developed for the VC Intelligence Interface + Live Enrichment Assignment - 2026*
+*Developed for the SignalHQ Intelligence Interface + Live Enrichment Assignment - 2026*
