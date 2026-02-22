@@ -39,7 +39,7 @@ A precision AI scout designed to turn VC investment theses into an always-on dis
 1.  **Clone the Repository**:
     ```bash
     git clone [repository-url]
-    cd vc-scout
+
     ```
 2.  **Install Dependencies**:
     ```bash

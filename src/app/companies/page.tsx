@@ -1,5 +1,7 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import React, { useState, useMemo, useEffect } from 'react';
 import CompanyTable from '@/components/companies/CompanyTable';
 import mockCompanies from '@/data/mock-companies.json';
