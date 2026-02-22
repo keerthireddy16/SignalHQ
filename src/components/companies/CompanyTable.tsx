@@ -106,8 +106,8 @@ export default function CompanyTable({ companies }: CompanyTableProps) {
                 </table>
             </div>
 
-            {/* Pagination Logic */}
-            <div className="px-10 py-6 border-t border-slate-100 flex items-center justify-between bg-slate-50/30">
+            {/* Balanced Pagination (Centered on mobile) */}
+            <div className="px-6 md:px-10 py-6 border-t border-slate-100 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 md:gap-0 bg-slate-50/30">
                 <div className="flex items-center gap-2">
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">Intelligence Stream</span>
                     <div className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-pulse"></div>

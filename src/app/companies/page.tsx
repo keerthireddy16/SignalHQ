@@ -95,17 +95,17 @@ function CompaniesContent() {
 
     return (
         <div className="max-w-7xl mx-auto space-y-10">
-            {/* Header & Stats */}
-            <div className="flex items-end justify-between">
+            {/* Header & Stats (Responsive Stacking) */}
+            <div className="flex flex-col items-start md:flex-row md:items-end justify-between gap-6 md:gap-0">
                 <div>
                     <div className="flex items-center gap-2 mb-2">
                         <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse-slow"></div>
                         <span className="text-[10px] font-bold text-blue-600 uppercase tracking-[0.2em]">Deep Sourcing</span>
                     </div>
-                    <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight">Market Intelligence</h2>
+                    <h2 className="text-2xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Market Intelligence</h2>
                     <p className="text-slate-500 mt-2 text-sm font-medium max-w-md leading-relaxed">Discover, analyze, and track the next generation of industry-defining companies.</p>
                 </div>
-                <div className="flex gap-6">
+                <div className="flex gap-4 md:gap-6 w-full md:w-auto">
                     <button
                         onClick={() => setIsSaveModalOpen(true)}
                         className="bg-white border border-slate-200 px-6 py-2.5 rounded-xl text-xs font-bold text-slate-600 hover:text-blue-600 hover:border-blue-200 transition-all flex items-center gap-2 shadow-sm active:scale-95"
@@ -139,8 +139,8 @@ function CompaniesContent() {
                     />
                 </div>
 
-                {/* Row 2: Dropdowns (Stacked on mobile) */}
-                <div className="flex flex-col md:flex-row items-center gap-4">
+                {/* Row 2: Dropdowns (Stacked on mobile with tight gap) */}
+                <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4">
                     <div className="w-full md:w-64">
                         <Dropdown
                             options={['All', ...stages]}
