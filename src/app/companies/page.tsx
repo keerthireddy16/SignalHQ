@@ -139,9 +139,9 @@ function CompaniesContent() {
                     />
                 </div>
 
-                {/* Row 2: Dropdowns */}
-                <div className="flex flex-wrap items-center gap-4">
-                    <div className="w-64">
+                {/* Row 2: Dropdowns (Stacked on mobile) */}
+                <div className="flex flex-col md:flex-row items-center gap-4">
+                    <div className="w-full md:w-64">
                         <Dropdown
                             options={['All', ...stages]}
                             value={selectedStage}
@@ -151,7 +151,7 @@ function CompaniesContent() {
                         />
                     </div>
 
-                    <div className="w-64">
+                    <div className="w-full md:w-64">
                         <Dropdown
                             options={['All', ...industries]}
                             value={selectedIndustry}
@@ -161,7 +161,7 @@ function CompaniesContent() {
                         />
                     </div>
 
-                    <div className="w-64">
+                    <div className="w-full md:w-64">
                         <Dropdown
                             options={['Name', 'Funding']}
                             value={sortBy}

@@ -17,7 +17,7 @@ export default function DashboardShell({ children }: { children: React.ReactNode
 
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row">
-            {/* Mobile Header */}
+            {/* Mobile Header (flex md:hidden) */}
             <header className="h-16 border-b border-slate-200 bg-white/80 backdrop-blur-md flex items-center justify-between px-6 sticky top-0 z-50 md:hidden">
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 flex items-center justify-center">
@@ -30,7 +30,7 @@ export default function DashboardShell({ children }: { children: React.ReactNode
                             <path d="M15 12H17" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" />
                         </svg>
                     </div>
-                    <span className="text-lg font-black tracking-tight text-slate-900 uppercase tracking-widest">SignalHQ</span>
+                    <span className="text-lg font-black tracking-tight text-slate-900 uppercase tracking-[0.15em]">SignalHQ</span>
                 </div>
                 <button
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -40,8 +40,8 @@ export default function DashboardShell({ children }: { children: React.ReactNode
                 </button>
             </header>
 
-            {/* Sidebar with Drawer Logic */}
-            <div className={`fixed inset-0 z-50 md:sticky md:top-0 md:h-screen md:z-auto transition-transform duration-300 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
+            {/* Top-level Layout Wrapper (Hides sidebar on mobile by instruction) */}
+            <div className={`fixed inset-0 z-50 transition-transform duration-300 transform md:hidden ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 {/* Backdrop for Mobile */}
                 {isSidebarOpen && (
                     <div
@@ -50,13 +50,21 @@ export default function DashboardShell({ children }: { children: React.ReactNode
                     />
                 )}
 
+                {/* Mobile Drawer Content */}
+                <div className="relative z-50 h-full w-64">
+                    <Sidebar />
+                </div>
+            </div>
+
+            {/* Desktop Sidebar (hidden md:flex) */}
+            <div className="hidden md:flex fixed left-0 top-0 bottom-0 w-64 z-40">
                 <Sidebar />
             </div>
 
-            {/* Main Content Area */}
-            <div className="flex-1 flex flex-col min-w-0">
+            {/* Main Content Area (ml-0 md:ml-64) */}
+            <div className="flex-1 flex flex-col min-w-0 ml-0 md:ml-64">
                 <Navbar />
-                <main className="flex-1 p-4 md:p-8 mt-20 md:mt-20">
+                <main className="flex-1 p-4 md:p-8 mt-4 md:mt-20">
                     {children}
                 </main>
             </div>

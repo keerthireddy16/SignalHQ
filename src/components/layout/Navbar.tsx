@@ -28,7 +28,7 @@ export default function Navbar() {
     };
 
     return (
-        <header className="h-20 glass fixed top-0 right-0 left-0 md:left-64 z-40 transition-all duration-300 bg-white/80 md:bg-transparent border-b border-slate-200/50">
+        <header className="h-20 glass fixed top-0 right-0 left-0 md:left-64 z-40 transition-all duration-300 bg-white/80 md:bg-transparent border-b border-slate-200/50 hidden md:block">
             <div className="h-full px-6 md:px-10 flex items-center justify-between">
                 {/* Left: Title */}
                 <div className="flex items-center shrink-0">
